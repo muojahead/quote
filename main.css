@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    transition: .3s linear;
+    -webkit-transition: .3s linear;
+    -moz-transition: .3s linear;
+    -ms-transition: .3s linear;
+    -o-transition: .3s linear;
+}
+:root{
+    --mainColor: #039EFD
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #009FFF; 
+    background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  
+    background: linear-gradient(to right, #ec2F4B, #009FFF);
+     
+}
+.quotes-box{
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 10px;
+    box-shadow: 1px 3px 5px rgba(110, 109, 109, 0.354);
+    position: relative;
+    overflow: hidden;
+}
+.loader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: var(--mainColor);
+    transition: .3s linear;
+    -webkit-transition: .3s linear;
+    -moz-transition: .3s linear;
+    -ms-transition: .3s linear;
+    -o-transition: .3s linear;
+}
+.loader i{
+    animation: spinner 1s ease-in-out infinite ;
+    -webkit-animation: spinner 1s ease-in-out infinite ;
+}
+@keyframes spinner {
+    0%{
+        transform: rotate(0);
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+}
+100%{
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+}
+.title{
+    text-align: center;
+    margin: 10px auto;
+    font-weight: bold;
+}
+.quote{
+    margin: 10px 10px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    border-bottom: .5px solid rgba(0, 0, 0, 0.109);
+    padding-bottom: 10px;
+}
+.quote p:first-of-type{
+    font-weight: 500;
+    padding: 25px 10px;
+    font-size: 16px;
+}
+.quote .by{
+    position: absolute;
+    bottom: 5px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.quote .by .line{
+    height: 1px;
+    width: 20px;
+    margin-right: 3px;
+    background-color: rgba(0, 0, 0, 0.436);
+}
+.quote i{
+    margin: 0 0px;
+    color: var(--mainColor);
+    opacity: .4;
+}
+.actions{
+    display: flex;
+}
+.actions span{
+    display: flex;
+    justify-content: space-around;
+    margin:  0;
+}
+button:not(#next_qoute){
+    background-color: transparent;
+    border: .5px solid var(--mainColor);
+    margin: 0 7px;
+    font-size: 18px;
+    color: var(--mainColor);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s linear;
+    -webkit-transition: .3s linear;
+    -moz-transition: .3s linear;
+    -ms-transition: .3s linear;
+    -o-transition: .3s linear;
+    cursor: pointer;
+}
+button:not(#next_qoute):hover{
+    background-color: var(--mainColor);
+    border-color:transparent ;
+    color: #fff;
+}
+button#next_qoute{
+    margin-left: auto;
+    background-color: var(--mainColor);
+    border: none;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    padding: 10px 15px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+.owner-box{
+    padding: 10px 20px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    background-color: #fff;
+    color: var(--mainColor);
+    font-weight: bolder;
+    margin: 10px auto;
+    text-decoration: none;
+
+}
+
+/* Responsive */
+
+@media(max-width:340px){
+    .quotes-box{
+        padding: 10px;
+    }
+    .title{
+        font-size: 15px;
+    }
+    .actions{
+        display: block;
+    }
+    .actions span{
+        display: flex;
+        justify-content: space-around;
+        margin: 10px auto;
+    }
+    #next_qoute{
+        display: block;
+        width: 100%;
+    }
+}
